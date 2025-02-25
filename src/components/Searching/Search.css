@@ -1,0 +1,64 @@
+.search-container {
+    display: block;
+
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* موقعیت ثابت برای چسباندن به بالا */
+    top: 0; /* شروع از وسط صفحه */
+    left: 12;
+    right: 0;
+    transition: top 0.6s ease, max-width 0.6s ease; /* انیمیشن برای حرکت به سمت بالا */
+    overflow: hidden; /* برای مخفی کردن نوار هنگام بسته شدن */
+}
+
+search-container.open {
+    top: 0; /* وقتی که کلاس 'open' فعال است، به بالا چسبیده */
+}
+
+.search-container input {
+    width: 200px;
+    padding: 11px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.6s ease;
+    /* افکت انیمیشن برای باز و بسته شدن*/
+    transition: width 0.6s ease, border-color 0.4s ease;
+    text-align: center;
+
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #5cb85c;
+}
+
+.search-container button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #d5d538;
+}
+
+.search-container button:active {
+    background-color: #0bfd7c;
+}
+
+.search-container .open input {
+    width: 250px; /* عرض زمانی که نوار باز می‌شود */
+}
+
+.search-btn {
+    padding-left: 20px;
+    margin: 0 auto;
+    height: auto;
+}
