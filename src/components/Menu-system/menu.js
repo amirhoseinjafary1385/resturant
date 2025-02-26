@@ -13,7 +13,7 @@ const Menu = ({addToCart}) => {
         { id: 4, name: 'کباب کوبیده', price: 135000 },
         { id: 5, name:  'کوبیده مرغ جوجه کباب', price: 100000 },
         { id: 6, name:  'کوکو گوشت  ', price: 200000 },
-        { id: 7, name:  'پیتزا ایتالیایی', price: 170000},
+        { id: 7, name:  'پیتزا ایتالیایی', price: 194000},
         //Increase Info
         
     ];
@@ -30,7 +30,10 @@ const Menu = ({addToCart}) => {
             {dishes.map(dish =>(
                 <div key={dish.id} className="menu-item">
                     <h3>{dish.name}</h3>
-                    <p>قیمت: {dish.price} تومان</p>                    
+                    <p>قیمت: {dish.price} تومان</p>  
+                    function addToCart(params) {
+                        
+                    }                  
                     <button onClick={() => addToCart(dish)}>اضافه کردن به سبد خرید شما...</button>
                 </div>               
             ))}
